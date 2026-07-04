@@ -21,14 +21,14 @@ const EXPERIENCES: Job[] = [
     duration: "Feb 2025 – Present",
     type: "Full-Time",
     achievements: [
-      "Successfully integrated UAE PASS authentication and document sharing inside secure fintech applications, establishing legally valid identity verifications and frictionless document sharing flow.",
-      "Engineered real-time tracking and location synchronization using WebSockets, Geolocation services, and custom overlays on Google Maps API, ensuring high reliability for transportation utilities.",
-      "Developed secure transaction layers, payment portal workflows, and account overview components for financial utility apps.",
-      "Optimized API calls, SQLite storage structures, and local state syncing, improving application load speed by up to 25%.",
-      "Directed end-to-end publishing pipelines, handling provisioning profiles, Apple App Store Connect distributions, and Google Play Console release management.",
-      "Collaborated in active Agile/Scrum cycles, reviewing code commits, advising on architectural refinements, and mentoring junior interns."
+      "Engineered a highly scalable social matchmaking application (Click4Marry), optimizing real-time conversations, voice notes, and matchmaking logs via Cloud Firestore.",
+      "Developed custom biometrics authentication and profile verification workflows to ensure secure user onboarding.",
+      "Implemented local offline persistence using Hive and SQLite databases, optimizing API queries and reducing average page load latency by 20%.",
+      "Created robust screen capture blocking (anti-screenshot protection) inside private photo albums, implementing native window flags for Android and iOS.",
+      "Managed end-to-end publishing and distribution pipelines on Apple App Store Connect and Google Play Console.",
+      "Collaborated in Agile teams, adopting MVVM Architecture paired with Provider to write clean, unit-tested, and highly maintainable components."
     ],
-    techs: ["Flutter", "Dart", "Firebase", "UAE PASS Integration", "WebSockets", "Google Maps API", "REST APIs", "SQLite", "Hive", "Git", "Xcode", "Android Studio"]
+    techs: ["Flutter", "Dart", "Cloud Firestore", "Firebase SDK", "FCM Messages", "REST APIs", "SQLite", "Hive Cache", "Provider", "Git", "Xcode", "Android Studio"]
   },
   {
     role: "Flutter Intern",

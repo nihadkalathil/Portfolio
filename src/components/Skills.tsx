@@ -38,7 +38,7 @@ const SKILL_CATEGORIES: SkillCategory[] = [
     skills: [
       { name: "Provider (State Management)", level: 95 },
       { name: "ChangeNotifier & ValueNotifier", level: 90 },
-      { name: "Clean Architecture (Domain/Data/UI)", level: 92 }
+      { name: "MVVM Architecture", level: 92 }
     ]
   },
   {

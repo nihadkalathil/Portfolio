@@ -28,9 +28,9 @@ const STATS: StatItem[] = [
   },
   {
     value: "100%",
-    label: "Clean Architecture",
+    label: "MVVM Architecture",
     icon: Layers,
-    desc: "Strict adherence to Clean Coding, MVC/Provider structures, and robust modular testing.",
+    desc: "Strict adherence to Clean Coding, MVVM/Provider structures, and robust modular testing.",
     colorClass: "text-brand-emerald"
   }
 ];

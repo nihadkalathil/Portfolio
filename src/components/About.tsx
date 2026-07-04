@@ -53,10 +53,10 @@ export default function About() {
               I am a passionate <strong className="font-semibold text-foreground">Flutter Developer</strong> who loves transforming complex business goals into fluid, scalable mobile applications. My path began with a solid academic foundation in computer programming, culminating in a <strong className="font-semibold text-foreground">Master of Computer Applications (MCA)</strong>.
             </p>
             <p className="text-foreground/75 font-light leading-relaxed">
-              My engineering philosophy revolves around three main tenets: <strong className="font-semibold text-foreground">Clean Architecture</strong>, <strong className="font-semibold text-foreground">Security-First Integration</strong>, and <strong className="font-semibold text-foreground">Seamless User Experience</strong>. I believe a mobile app is not just code—it&apos;s a gateway for users to solve real-world problems. Whether integrating complex government authentication APIs like <strong className="font-semibold text-foreground">UAE PASS</strong> or implementing real-time WebSocket tracking in active logistics networks, I strive to write readable, unit-tested, and performant code.
+              My engineering philosophy revolves around three main tenets: <strong className="font-semibold text-foreground">MVVM Architecture</strong>, <strong className="font-semibold text-foreground">Security-First Integration</strong>, and <strong className="font-semibold text-foreground">Seamless User Experience</strong>. I believe a mobile app is not just code—it&apos;s a gateway for users to solve real-world problems. Whether building real-time messaging interfaces with Cloud Firestore or implementing robust anti-screenshot window flags to protect user privacy, I strive to write readable, unit-tested, and performant code.
             </p>
             <p className="text-foreground/75 font-light leading-relaxed">
-              At <strong className="font-semibold text-foreground">Aufait Technologies</strong>, I have had the opportunity to build high-stakes applications in fintech, logistics, and client services. I thrive in collaborative Agile teams where code reviews push us to make better systems. When I&apos;m not coding, I keep up with mobile trends, experiment with new libraries, and explore systems engineering concepts.
+              At <strong className="font-semibold text-foreground">Aufait Technologies</strong>, I have had the opportunity to build high-stakes applications in social, communication, and client services. I thrive in collaborative Agile teams where code reviews push us to make better systems. When I&apos;m not coding, I keep up with mobile trends, experiment with new libraries, and explore systems engineering concepts.
             </p>
           </motion.div>
 
@@ -126,7 +126,7 @@ export default function About() {
                 <h4 className="font-bold text-foreground">Development Pillars</h4>
               </div>
               <ul className="text-xs text-foreground/70 flex flex-col gap-2 list-disc pl-4">
-                <li>Strict Separation of Concerns via Clean Architecture (Domain, Data, Presentation layers)</li>
+                <li>Strict Separation of Concerns via MVVM Architecture</li>
                 <li>State management optimized for rendering efficiency (Provider / ChangeNotifier)</li>
                 <li>Comprehensive security configurations (FIDO2, Google Play Integrity API, SSL pinning, OAuth)</li>
                 <li>CI/CD pipelines for automatic lint, test, and build cycles</li>

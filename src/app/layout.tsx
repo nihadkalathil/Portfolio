@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Nihad K | Premium Flutter & Cross-Platform Mobile App Developer",
-  description: "Portfolio of Nihad K, a results-driven Flutter Developer specializing in building high-performance, secure, and scalable mobile apps for Android & iOS with Dart, Firebase, WebSockets, and clean architecture.",
+  description: "Portfolio of Nihad K, a results-driven Flutter Developer specializing in building high-performance, secure, and scalable mobile apps for Android & iOS with Dart, Firebase, and MVVM architecture.",
   keywords: [
     "Flutter Developer",
     "Mobile App Developer",
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     "Dart Programming",
     "Firebase App Developer",
     "Cross-platform Development",
-    "UAE PASS Integration",
-    "Fintech App Developer",
+    "Matrimony App Developer",
+    "MVVM Architecture",
     "Kerala Software Engineer"
   ],
   authors: [{ name: "Nihad K" }],
   openGraph: {
     title: "Nihad K | Premium Flutter & Cross-Platform Mobile App Developer",
-    description: "Explore Nihad K's mobile portfolio showcasing production-ready Android/iOS apps, secure payment workflows, and real-time WebSocket integrations.",
+    description: "Explore Nihad K's mobile portfolio showcasing production-ready Android/iOS apps, real-time chat, and secure biometrics integrations.",
     url: "https://github.com/nihadkalathil/Portfolio",
     siteName: "Nihad K Portfolio",
     locale: "en_US",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Nihad K | Premium Flutter & Cross-Platform Mobile App Developer",
-    description: "Explore Nihad K's mobile portfolio showcasing production-ready Android/iOS apps, secure payment workflows, and real-time WebSocket integrations.",
+    description: "Explore Nihad K's mobile portfolio showcasing production-ready Android/iOS apps, real-time chat, and secure biometrics integrations.",
   },
 };
 
@@ -66,10 +66,10 @@ export default function RootLayout({
       "iOS Development",
       "Firebase",
       "RESTful Web APIs",
-      "WebSockets",
-      "Clean Architecture",
+      "MVVM Architecture",
       "Mobile App Security",
-      "UAE PASS Integration"
+      "FIDO2 Passwordless Auth",
+      "Google Play Integrity API"
     ],
     "worksFor": {
       "@type": "Organization",

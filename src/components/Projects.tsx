@@ -30,29 +30,29 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
-    id: "ajexpay",
-    name: "AJEXPAY",
-    category: "fintech",
-    summary: "Secure digital wallet and utility payments portal featuring government-grade UAE PASS verification.",
-    role: "Associate Flutter Engineer",
-    problem: "Financial utility signups experience extreme dropoffs during onboarding due to manual ID uploads and verification processes. Integrating the secure UAE PASS national authentication system was crucial but challenging.",
+    id: "click4marry",
+    name: "Click4Marry",
+    category: "social",
+    summary: "Scalable matchmaking application built with real-time conversations and strong image privacy blocks.",
+    role: "Flutter Developer",
+    problem: "Matchmaking apps require high scalability for live profile indexing alongside strict user privacy protections (such as preventing photo copying or screenshots).",
     features: [
-      "Secure UAE PASS single sign-on integration for immediate KYC verification.",
-      "Secured transactions logs, invoice bills, and wallet balances.",
-      "Local biometrics authentication (Biometric Auth/FaceID).",
-      "Google Play Integrity, FIDO2 integration, and SSL Pinning to prevent unauthorized access."
+      "Real-time text, voice notes, and matchmaking updates via Firestore listeners.",
+      "Profile verification workflows and custom visual flags.",
+      "Private photo album vaults visible only to approved matches.",
+      "Intelligent matching recommendations calculated on user preference indices."
     ],
-    techs: ["Flutter", "Dart", "UAE PASS SDK", "FIDO2 SDK", "Play Integrity API", "Firebase Auth", "SQLite", "Local Auth", "Flutter Secure Storage"],
-    architecture: "Clean Architecture with Provider state management. Enhanced with FIDO2 Passwordless Auth, Google Play Integrity API, and SSL Pinning.",
-    challenges: "Safely processing browser authorization redirect schemes (Deep Links) and securing access tokens across Android and iOS sandbox roots.",
-    solutions: "Configured robust Custom URL Schemes and App Links to intercept UAE PASS login callbacks, and saved credentials using encrypted preferences via AES-256.",
-    results: "Achieved seamless KYC login reducing onboarding from 12 inputs to a single secure click, leading to a 40% increase in successful wallet setup completions.",
-    lessons: "Validating redirect links requires precise deep link path checking to shield apps from URI spoofing vulnerabilities.",
+    techs: ["Flutter", "Dart", "Cloud Firestore", "FCM Messages", "Firebase Cloud Storage", "REST APIs", "Hive Cache", "Provider"],
+    architecture: "MVVM Pattern with Provider State Management and Local Offline Cache.",
+    challenges: "Implementing real-time messaging that functions seamlessly during poor connection periods and blocking screen capture on private profiles.",
+    solutions: "Utilized Firestore's local persistence layers linked to a fast Hive database store, and blocked layout screenshot events at the Android window level and iOS UI window level.",
+    results: "Maintained a secure platform with 20,000+ active users and zero reported screenshot privacy violations or memory leaks.",
+    lessons: "Enforcing security boundaries like anti-screenshot blocks must be performed at the native OS window layer rather than through abstract Flutter methods.",
     links: [
       {
-        label: "Ajexpay Wallet",
-        ios: "https://apps.apple.com/app/id6751193078",
-        android: "https://play.google.com/store/apps/details?id=com.ajex.app&hl=en_IN"
+        label: "Click4Marry Matrimony",
+        ios: "https://apps.apple.com/app/id1613457079",
+        android: "https://play.google.com/store/apps/details?id=com.madhyamam.click4marry&hl=en_IN"
       }
     ]
   }
