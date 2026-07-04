@@ -22,17 +22,39 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formState.name || !formState.email || !formState.message) return;
     
-    // Simulate API request
     setFormSubmitted(true);
-    setTimeout(() => {
-      setFormState({ name: "", email: "", subject: "", message: "" });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          access_key: "c2aa7930-2732-495e-82d7-c5f4e0a9fc17",
+          name: formState.name,
+          email: formState.email,
+          subject: formState.subject || "New Message from Portfolio",
+          message: formState.message
+        })
+      });
+      
+      const result = await response.json();
+      if (response.status === 200 && result.success) {
+        alert("Thank you for reaching out! Your message was sent successfully.");
+        setFormState({ name: "", email: "", subject: "", message: "" });
+      } else {
+        alert(result.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("An error occurred. Please try again later.");
+    } finally {
       setFormSubmitted(false);
-      alert("Thank you for reaching out! Your message was sent successfully.");
-    }, 1500);
+    }
   };
 
   return (
