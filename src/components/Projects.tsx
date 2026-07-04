@@ -2,8 +2,14 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, HelpCircle, ShieldAlert, Award, BookOpen, Layers, X, Cpu } from "lucide-react";
+import { ExternalLink, HelpCircle, ShieldAlert, Award, BookOpen, Layers, X, Cpu, Apple, Play } from "lucide-react";
 import { cn } from "@/lib/utils";
+
+interface ProjectLink {
+  label: string;
+  ios?: string;
+  android?: string;
+}
 
 interface Project {
   id: string;
@@ -19,6 +25,7 @@ interface Project {
   solutions: string;
   results: string;
   lessons: string;
+  links?: ProjectLink[];
 }
 
 const PROJECTS: Project[] = [
@@ -40,7 +47,24 @@ const PROJECTS: Project[] = [
     challenges: "Synchronizing continuous location streams between customer and merchant devices in background states without severe battery drain.",
     solutions: "Optimized the Geolocator stream by setting movement thresholds (meters) and speed-adaptive update intervals, combined with lightweight background service runners.",
     results: "Successfully launched three synchronized platforms (User, Merchant, Dispatch Dashboard) which reduced roadside response times by 35%.",
-    lessons: "Throttling background data streams and using static caching for Map markers drastically optimizes frame rates and battery performance on low-end devices."
+    lessons: "Throttling background data streams and using static caching for Map markers drastically optimizes frame rates and battery performance on low-end devices.",
+    links: [
+      {
+        label: "OLO: The Car App",
+        ios: "https://apps.apple.com/app/id6746630021",
+        android: "https://play.google.com/store/apps/details?id=com.olo.customer&hl=en_IN"
+      },
+      {
+        label: "OLO Merchant",
+        ios: "https://apps.apple.com/app/id6745612103",
+        android: "https://play.google.com/store/apps/details?id=com.olo.merchant_app&hl=en_IN"
+      },
+      {
+        label: "OLO SOS",
+        ios: "https://apps.apple.com/app/id6749142719",
+        android: "https://play.google.com/store/apps/details?id=com.olosos.app&hl=en_IN"
+      }
+    ]
   },
   {
     id: "ajexpay",
@@ -60,7 +84,14 @@ const PROJECTS: Project[] = [
     challenges: "Safely processing browser authorization redirect schemes (Deep Links) and securing access tokens across Android and iOS sandbox roots.",
     solutions: "Configured robust Custom URL Schemes and App Links to intercept UAE PASS login callbacks, and saved credentials using encrypted preferences via AES-256.",
     results: "Achieved seamless KYC login reducing onboarding from 12 inputs to a single secure click, leading to a 40% increase in successful wallet setup completions.",
-    lessons: "Validating redirect links requires precise deep link path checking to shield apps from URI spoofing vulnerabilities."
+    lessons: "Validating redirect links requires precise deep link path checking to shield apps from URI spoofing vulnerabilities.",
+    links: [
+      {
+        label: "Ajexpay Wallet",
+        ios: "https://apps.apple.com/app/id6751193078",
+        android: "https://play.google.com/store/apps/details?id=com.ajex.app&hl=en_IN"
+      }
+    ]
   },
   {
     id: "click4marry",
@@ -80,7 +111,14 @@ const PROJECTS: Project[] = [
     challenges: "Implementing real-time messaging that functions seamlessly during poor connection periods and blocking screen capture on private profiles.",
     solutions: "Utilized Firestore's local persistence layers linked to a fast Hive database store, and blocked layout screenshot events at the Android window level and iOS UI window level.",
     results: "Maintained a secure platform with 20,000+ active users and zero reported screenshot privacy violations or memory leaks.",
-    lessons: "Enforcing security boundaries like anti-screenshot blocks must be performed at the native OS window layer rather than through abstract Flutter methods."
+    lessons: "Enforcing security boundaries like anti-screenshot blocks must be performed at the native OS window layer rather than through abstract Flutter methods.",
+    links: [
+      {
+        label: "Click4Marry Matrimony",
+        ios: "https://apps.apple.com/app/id1613457079",
+        android: "https://play.google.com/store/apps/details?id=com.madhyamam.click4marry&hl=en_IN"
+      }
+    ]
   }
 ];
 
@@ -235,6 +273,46 @@ export default function Projects() {
                       </div>
                     </div>
                   </div>
+
+                  {/* App Links (Download) */}
+                  {selectedProject.links && selectedProject.links.length > 0 && (
+                    <div className="glass-panel p-5 rounded-2xl border border-white/5 dark:border-white/10 bg-brand-purple/[0.01] flex flex-col gap-4">
+                      <h4 className="font-bold text-foreground text-xs sm:text-sm uppercase tracking-wide flex items-center gap-2">
+                        <ExternalLink className="w-4 h-4 text-brand-purple" /> App Downloads
+                      </h4>
+                      <div className="flex flex-col gap-2.5">
+                        {selectedProject.links.map((link, idx) => (
+                          <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 rounded-xl bg-foreground/[0.02] border border-foreground/5 dark:border-white/5">
+                            <span className="font-semibold text-foreground text-xs sm:text-sm">{link.label}</span>
+                            <div className="flex gap-2">
+                              {link.ios && (
+                                <a 
+                                  href={link.ios} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-black hover:bg-black/80 text-white text-xs font-semibold border border-white/10 transition-colors shadow-sm cursor-pointer"
+                                >
+                                  <Apple className="w-3.5 h-3.5" />
+                                  App Store
+                                </a>
+                              )}
+                              {link.android && (
+                                <a 
+                                  href={link.android} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold transition-colors shadow-sm cursor-pointer"
+                                >
+                                  <Play className="w-3.5 h-3.5 fill-current" />
+                                  Play Store
+                                </a>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   {/* Core Features */}
                   <div>

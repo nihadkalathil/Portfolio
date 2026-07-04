@@ -110,15 +110,15 @@ export default function Achievements() {
             <div className="flex flex-col gap-3 text-xs sm:text-sm text-foreground/75 font-light">
               <div className="flex gap-2 items-start">
                 <CheckCircle2 className="w-4 h-4 text-brand-emerald shrink-0 mt-0.5" />
-                <span>**Fintech Security**: Safe session locks, SSL Pinning, and client data sandbox isolation.</span>
+                <span><strong className="font-semibold text-foreground">Fintech Security</strong>: Safe session locks, SSL Pinning, and client data sandbox isolation.</span>
               </div>
               <div className="flex gap-2 items-start">
                 <CheckCircle2 className="w-4 h-4 text-brand-emerald shrink-0 mt-0.5" />
-                <span>**Deployment Excellence**: Released 3 separate store distributions with automated Bitbucket/Git pipelines.</span>
+                <span><strong className="font-semibold text-foreground">Deployment Excellence</strong>: Released 3 separate store distributions with automated Bitbucket/Git pipelines.</span>
               </div>
               <div className="flex gap-2 items-start">
                 <CheckCircle2 className="w-4 h-4 text-brand-emerald shrink-0 mt-0.5" />
-                <span>**Real-time Synchronization**: Maintained continuous map streams utilizing adaptive location polling.</span>
+                <span><strong className="font-semibold text-foreground">Real-time Synchronization</strong>: Maintained continuous map streams utilizing adaptive location polling.</span>
               </div>
             </div>
           </div>
