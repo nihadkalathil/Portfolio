@@ -37,7 +37,7 @@ const STATS: StatItem[] = [
     value: "100%",
     label: "Clean Architecture",
     icon: Layers,
-    desc: "Strict adherence to Clean Coding, MVC/Bloc structures, and robust modular testing.",
+    desc: "Strict adherence to Clean Coding, MVC/Provider structures, and robust modular testing.",
     colorClass: "text-brand-emerald"
   }
 ];
@@ -110,7 +110,7 @@ export default function Achievements() {
             <div className="flex flex-col gap-3 text-xs sm:text-sm text-foreground/75 font-light">
               <div className="flex gap-2 items-start">
                 <CheckCircle2 className="w-4 h-4 text-brand-emerald shrink-0 mt-0.5" />
-                <span><strong className="font-semibold text-foreground">Fintech Security</strong>: Safe session locks, SSL Pinning, and client data sandbox isolation.</span>
+                <span><strong className="font-semibold text-foreground">Fintech Security</strong>: Safe session locks, FIDO2 Passwordless Auth, Google Play Integrity API, and SSL Pinning.</span>
               </div>
               <div className="flex gap-2 items-start">
                 <CheckCircle2 className="w-4 h-4 text-brand-emerald shrink-0 mt-0.5" />

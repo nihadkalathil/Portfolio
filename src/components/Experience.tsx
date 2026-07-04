@@ -39,11 +39,11 @@ const EXPERIENCES: Job[] = [
     achievements: [
       "Assisted senior engineers in prototyping, drafting modular widgets, and integrating backend REST endpoints into core views.",
       "Developed cross-platform responsive screens supporting various screen dimensions and aspect ratios across Android and iOS devices.",
-      "Debugged local database states, state management variables (Bloc/Provider), and HTTP errors, resolving 50+ user-reported layout and data errors.",
+      "Debugged local database states, state management variables (Provider), and HTTP errors, resolving 50+ user-reported layout and data errors.",
       "Wrote structured unit and widget test cases, achieving a 75% coverage rate for critical business validation modules.",
       "Participated in daily standups, code walk-throughs, and collaborative git work branches in Bitbucket and GitHub environments."
     ],
-    techs: ["Flutter", "Dart", "RESTful APIs", "Firebase", "Git", "Bloc State Management", "Android Studio", "Postman"]
+    techs: ["Flutter", "Dart", "RESTful APIs", "Firebase", "Git", "Provider State Management", "Android Studio", "Postman"]
   }
 ];
 

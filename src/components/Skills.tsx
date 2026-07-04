@@ -37,16 +37,17 @@ const SKILL_CATEGORIES: SkillCategory[] = [
     title: "Architecture & State Mgmt",
     icon: Layers,
     skills: [
-      { name: "Bloc / Cubit Pattern", level: 95 },
-      { name: "Provider Pattern", level: 90 },
-      { name: "Clean Architecture (Domain/Data/UI)", level: 92 },
-      { name: "Riverpod Pattern", level: 80 }
+      { name: "Provider (State Management)", level: 95 },
+      { name: "ChangeNotifier & ValueNotifier", level: 90 },
+      { name: "Clean Architecture (Domain/Data/UI)", level: 92 }
     ]
   },
   {
-    title: "Authentication",
+    title: "Authentication & Security",
     icon: Key,
     skills: [
+      { name: "FIDO2 Passwordless Auth", level: 90 },
+      { name: "Google Play Integrity API", level: 92 },
       { name: "UAE PASS Integration", level: 95 },
       { name: "Firebase Authentication", level: 92 },
       { name: "OAuth 2.0 & Session Tokens", level: 88 }

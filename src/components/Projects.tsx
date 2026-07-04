@@ -43,7 +43,7 @@ const PROJECTS: Project[] = [
       "Dedicated Merchant App for driver request management and pricing updates."
     ],
     techs: ["Flutter", "Dart", "Google Maps API", "WebSockets", "RESTful APIs", "FCM Push Notifications", "Geolocator"],
-    architecture: "Clean Architecture split into separate Domain, Data, and Presentation layers, utilizing Bloc state management.",
+    architecture: "Clean Architecture split into separate Domain, Data, and Presentation layers, utilizing Provider state management.",
     challenges: "Synchronizing continuous location streams between customer and merchant devices in background states without severe battery drain.",
     solutions: "Optimized the Geolocator stream by setting movement thresholds (meters) and speed-adaptive update intervals, combined with lightweight background service runners.",
     results: "Successfully launched three synchronized platforms (User, Merchant, Dispatch Dashboard) which reduced roadside response times by 35%.",
@@ -77,10 +77,10 @@ const PROJECTS: Project[] = [
       "Secure UAE PASS single sign-on integration for immediate KYC verification.",
       "Secured transactions logs, invoice bills, and wallet balances.",
       "Local biometrics authentication (Biometric Auth/FaceID).",
-      "SSL Pinning and token rotation policies to block intercept audits."
+      "Google Play Integrity, FIDO2 integration, and SSL Pinning to prevent unauthorized access."
     ],
-    techs: ["Flutter", "Dart", "UAE PASS SDK", "Firebase Auth", "SQLite", "Local Auth", "Flutter Secure Storage"],
-    architecture: "Clean Architecture with Cubit state management. Network communication secured via SSL Pinning and encrypting HTTP body parameters.",
+    techs: ["Flutter", "Dart", "UAE PASS SDK", "FIDO2 SDK", "Play Integrity API", "Firebase Auth", "SQLite", "Local Auth", "Flutter Secure Storage"],
+    architecture: "Clean Architecture with Provider state management. Enhanced with FIDO2 Passwordless Auth, Google Play Integrity API, and SSL Pinning.",
     challenges: "Safely processing browser authorization redirect schemes (Deep Links) and securing access tokens across Android and iOS sandbox roots.",
     solutions: "Configured robust Custom URL Schemes and App Links to intercept UAE PASS login callbacks, and saved credentials using encrypted preferences via AES-256.",
     results: "Achieved seamless KYC login reducing onboarding from 12 inputs to a single secure click, leading to a 40% increase in successful wallet setup completions.",

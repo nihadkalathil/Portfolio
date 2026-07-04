@@ -157,7 +157,7 @@ export default function Hero() {
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-4xl px-4">
           {[
             { icon: Smartphone, label: "Flutter & Dart", desc: "Cross-Platform" },
-            { icon: Layers, label: "Clean Architecture", desc: "Bloc / State Mgmt" },
+            { icon: Layers, label: "Clean Architecture", desc: "Provider / State Mgmt" },
             { icon: Flame, label: "Firebase Services", desc: "Auth, Firestore, FCM" },
             { icon: Mail, label: "REST APIs", desc: "Secure Payments & Maps" },
           ].map((card, i) => (
