@@ -30,43 +30,6 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
-    id: "olo",
-    name: "OLO (The Car App, Merchant, SOS)",
-    category: "logistics",
-    summary: "A suite of Flutter apps providing real-time vehicle towing, roadside assistance, and merchant coordination.",
-    role: "Lead Flutter Developer",
-    problem: "Motorists stranded on highways frequently face massive response delays due to inaccurate location descriptions and lack of direct dispatcher coordination. OLO connects stranded users with local roadside merchants in real-time.",
-    features: [
-      "Real-time continuous GPS tracking and route drawing using Google Maps API.",
-      "High-speed WebSockets integration for instantaneous driver location sync.",
-      "One-click SOS alert system notifying nearest towing partners.",
-      "Dedicated Merchant App for driver request management and pricing updates."
-    ],
-    techs: ["Flutter", "Dart", "Google Maps API", "WebSockets", "RESTful APIs", "FCM Push Notifications", "Geolocator"],
-    architecture: "Clean Architecture split into separate Domain, Data, and Presentation layers, utilizing Provider state management.",
-    challenges: "Synchronizing continuous location streams between customer and merchant devices in background states without severe battery drain.",
-    solutions: "Optimized the Geolocator stream by setting movement thresholds (meters) and speed-adaptive update intervals, combined with lightweight background service runners.",
-    results: "Successfully launched three synchronized platforms (User, Merchant, Dispatch Dashboard) which reduced roadside response times by 35%.",
-    lessons: "Throttling background data streams and using static caching for Map markers drastically optimizes frame rates and battery performance on low-end devices.",
-    links: [
-      {
-        label: "OLO: The Car App",
-        ios: "https://apps.apple.com/app/id6746630021",
-        android: "https://play.google.com/store/apps/details?id=com.olo.customer&hl=en_IN"
-      },
-      {
-        label: "OLO Merchant",
-        ios: "https://apps.apple.com/app/id6745612103",
-        android: "https://play.google.com/store/apps/details?id=com.olo.merchant_app&hl=en_IN"
-      },
-      {
-        label: "OLO SOS",
-        ios: "https://apps.apple.com/app/id6749142719",
-        android: "https://play.google.com/store/apps/details?id=com.olosos.app&hl=en_IN"
-      }
-    ]
-  },
-  {
     id: "ajexpay",
     name: "AJEXPAY",
     category: "fintech",
@@ -92,41 +55,11 @@ const PROJECTS: Project[] = [
         android: "https://play.google.com/store/apps/details?id=com.ajex.app&hl=en_IN"
       }
     ]
-  },
-  {
-    id: "click4marry",
-    name: "Click4Marry",
-    category: "social",
-    summary: "Scalable matchmaking application built with real-time conversations and strong image privacy blocks.",
-    role: "Flutter Developer",
-    problem: "Matchmaking apps require high scalability for live profile indexing alongside strict user privacy protections (such as preventing photo copying or screenshots).",
-    features: [
-      "Real-time text, voice notes, and matchmaking updates via Firestore listeners.",
-      "Profile verification workflows and custom visual flags.",
-      "Private photo album vaults visible only to approved matches.",
-      "Intelligent matching recommendations calculated on user preference indices."
-    ],
-    techs: ["Flutter", "Dart", "Cloud Firestore", "FCM Messages", "Firebase Cloud Storage", "REST APIs", "Hive Cache"],
-    architecture: "Clean MVC Pattern with Provider State Management and Local Offline Cache.",
-    challenges: "Implementing real-time messaging that functions seamlessly during poor connection periods and blocking screen capture on private profiles.",
-    solutions: "Utilized Firestore's local persistence layers linked to a fast Hive database store, and blocked layout screenshot events at the Android window level and iOS UI window level.",
-    results: "Maintained a secure platform with 20,000+ active users and zero reported screenshot privacy violations or memory leaks.",
-    lessons: "Enforcing security boundaries like anti-screenshot blocks must be performed at the native OS window layer rather than through abstract Flutter methods.",
-    links: [
-      {
-        label: "Click4Marry Matrimony",
-        ios: "https://apps.apple.com/app/id1613457079",
-        android: "https://play.google.com/store/apps/details?id=com.madhyamam.click4marry&hl=en_IN"
-      }
-    ]
   }
 ];
 
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState<"all" | "fintech" | "logistics" | "social">("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
-  const filteredProjects = PROJECTS.filter(p => activeFilter === "all" || p.category === activeFilter);
 
   return (
     <section id="projects" className="py-24 relative overflow-hidden">
@@ -135,36 +68,18 @@ export default function Projects() {
         {/* Section Header */}
         <div className="flex flex-col items-center mb-12 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
-            Featured <span className="bg-gradient-to-r from-brand-blue to-brand-purple bg-clip-text text-transparent">Projects</span>
+            Featured <span className="bg-gradient-to-r from-brand-blue to-brand-purple bg-clip-text text-transparent">Project</span>
           </h2>
           <div className="w-12 h-1 bg-brand-purple rounded-full mt-4" />
-        </div>
-
-        {/* Filters Tabs */}
-        <div className="flex flex-wrap gap-2 justify-center mb-12">
-          {["all", "fintech", "logistics", "social"].map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveFilter(tab as any)}
-              className={cn(
-                "px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer border",
-                activeFilter === tab 
-                  ? "bg-gradient-to-r from-brand-blue to-brand-purple text-white border-transparent shadow-lg shadow-brand-purple/20" 
-                  : "bg-foreground/5 hover:bg-foreground/10 text-foreground/75 border-foreground/5 dark:border-white/5"
-              )}
-            >
-              {tab === "all" ? "All Projects" : tab}
-            </button>
-          ))}
         </div>
 
         {/* Projects Cards Grid */}
         <motion.div 
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl mx-auto"
+          className="grid grid-cols-1 max-w-md mx-auto gap-8 w-full"
         >
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
+            {PROJECTS.map((project) => (
               <motion.div
                 key={project.id}
                 layout
