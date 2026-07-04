@@ -32,6 +32,22 @@ export default function Hero() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex flex-col items-center text-center">
         
+        {/* Profile Picture */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ type: "spring", stiffness: 150, delay: 0.1 }}
+          className="relative w-32 h-32 sm:w-36 sm:h-36 mb-6 rounded-full p-1 bg-gradient-to-r from-brand-blue via-brand-purple to-brand-cyan shadow-xl shadow-brand-purple/20"
+        >
+          <div className="w-full h-full rounded-full overflow-hidden border-2 border-background/20 dark:border-white/10 bg-foreground/10 relative">
+            <img 
+              src="/profile.jpg" 
+              alt="Nihad K - Profile Picture"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </motion.div>
+
         {/* Availability Badge */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}

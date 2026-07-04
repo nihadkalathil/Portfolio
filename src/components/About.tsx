@@ -65,6 +65,17 @@ export default function About() {
             variants={itemVariants}
             className="lg:col-span-5 flex flex-col gap-6 w-full"
           >
+            {/* Professional Portrait Card */}
+            <div className="glass-panel overflow-hidden rounded-2xl border border-white/5 dark:border-white/10 relative p-2 bg-white/[0.01]">
+              <div className="rounded-xl overflow-hidden aspect-[4/3] relative">
+                <img 
+                  src="/profile.jpg" 
+                  alt="Nihad K - Profile Photo"
+                  className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
+
             {/* Education Box */}
             <div className="glass-panel p-6 rounded-2xl border border-white/5 dark:border-white/10">
               <div className="flex items-center gap-3 mb-4 text-brand-purple">
