@@ -20,14 +20,7 @@ const STATS: StatItem[] = [
     colorClass: "text-brand-purple"
   },
   {
-    value: "10+",
-    label: "API & Integrations",
-    icon: Zap,
-    desc: "REST APIs, WebSockets, and third-party SDK systems (including UAE PASS) linked.",
-    colorClass: "text-brand-blue"
-  },
-  {
-    value: "2+",
+    value: "2",
     label: "Years Experience",
     icon: Award,
     desc: "Dedicated professional software experience in Agile workspace structures.",
@@ -78,7 +71,7 @@ export default function Achievements() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16"
         >
           {STATS.map((stat) => (
             <motion.div
