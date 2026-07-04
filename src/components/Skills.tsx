@@ -29,8 +29,7 @@ const SKILL_CATEGORIES: SkillCategory[] = [
     title: "Frameworks & SDKs",
     icon: Smartphone,
     skills: [
-      { name: "Flutter SDK", level: 95 },
-      { name: "Next.js & React (Web Basics)", level: 65 }
+      { name: "Flutter SDK", level: 95 }
     ]
   },
   {
