@@ -127,7 +127,7 @@ export default function About() {
               </div>
               <ul className="text-xs text-foreground/70 flex flex-col gap-2 list-disc pl-4">
                 <li>Strict Separation of Concerns via MVVM Architecture</li>
-                <li>State management optimized for rendering efficiency (Provider / ChangeNotifier)</li>
+                <li>State management optimized for rendering efficiency (Provider)</li>
                 <li>Comprehensive security configurations (FIDO2, Google Play Integrity API, SSL pinning, OAuth)</li>
                 <li>CI/CD pipelines for automatic lint, test, and build cycles</li>
               </ul>
