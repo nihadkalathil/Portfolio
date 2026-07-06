@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Nihad K | Premium Flutter & Cross-Platform Mobile App Developer",
-  description: "Portfolio of Nihad K, a results-driven Flutter Developer specializing in building high-performance, secure, and scalable mobile apps for Android & iOS with Dart, Firebase, and MVVM architecture.",
+  description: "Portfolio of Nihad K, a results-driven Flutter Developer specializing in building high-performance, secure, and scalable mobile apps (Fintech, On-Demand, Social) with Dart, Firebase, and MVVM architecture.",
   keywords: [
     "Flutter Developer",
     "Mobile App Developer",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Nihad K" }],
   openGraph: {
     title: "Nihad K | Premium Flutter & Cross-Platform Mobile App Developer",
-    description: "Explore Nihad K's mobile portfolio showcasing production-ready Android/iOS apps, real-time chat, and secure biometrics integrations.",
+    description: "Explore Nihad K's mobile portfolio showcasing production-ready Android/iOS apps in fintech, utility location tracking, and real-time chat.",
     url: "https://github.com/nihadkalathil/Portfolio",
     siteName: "Nihad K Portfolio",
     locale: "en_US",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Nihad K | Premium Flutter & Cross-Platform Mobile App Developer",
-    description: "Explore Nihad K's mobile portfolio showcasing production-ready Android/iOS apps, real-time chat, and secure biometrics integrations.",
+    description: "Explore Nihad K's mobile portfolio showcasing production-ready Android/iOS apps in fintech, utility location tracking, and real-time chat.",
   },
 };
 

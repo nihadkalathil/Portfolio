@@ -14,7 +14,7 @@ interface ProjectLink {
 interface Project {
   id: string;
   name: string;
-  category: "fintech" | "logistics" | "social";
+  category: "fintech" | "utility" | "social";
   summary: string;
   role: string;
   problem: string;
@@ -29,6 +29,70 @@ interface Project {
 }
 
 const PROJECTS: Project[] = [
+  {
+    id: "olo",
+    name: "OLO (The Car App, Merchant, SOS)",
+    category: "utility",
+    summary: "A suite of Flutter apps providing real-time vehicle towing, roadside assistance, and merchant coordination.",
+    role: "Lead Flutter Developer",
+    problem: "Motorists stranded on highways frequently face massive response delays due to inaccurate location descriptions and lack of direct dispatcher coordination. OLO connects stranded users with local roadside merchants in real-time.",
+    features: [
+      "Real-time continuous GPS tracking and route drawing using Google Maps API.",
+      "High-speed WebSockets integration for instantaneous driver location sync.",
+      "One-click SOS alert system notifying nearest towing partners.",
+      "Dedicated Merchant App for driver request management and pricing updates."
+    ],
+    techs: ["Flutter", "Dart", "Google Maps API", "WebSockets", "RESTful APIs", "FCM Push Notifications", "Geolocator", "Provider"],
+    architecture: "MVVM Pattern with Provider State Management.",
+    challenges: "Synchronizing continuous location streams between customer and merchant devices in background states without severe battery drain.",
+    solutions: "Optimized the Geolocator stream by setting movement thresholds (meters) and speed-adaptive update intervals, combined with lightweight background service runners.",
+    results: "Successfully launched three synchronized platforms (User, Merchant, Dispatch Dashboard) which reduced roadside response times by 35%.",
+    lessons: "Throttling background data streams and using static caching for Map markers drastically optimizes frame rates and battery performance on low-end devices.",
+    links: [
+      {
+        label: "OLO: The Car App",
+        ios: "https://apps.apple.com/app/id6746630021",
+        android: "https://play.google.com/store/apps/details?id=com.olo.customer&hl=en_IN"
+      },
+      {
+        label: "OLO Merchant",
+        ios: "https://apps.apple.com/app/id6745612103",
+        android: "https://play.google.com/store/apps/details?id=com.olo.merchant_app&hl=en_IN"
+      },
+      {
+        label: "OLO SOS",
+        ios: "https://apps.apple.com/app/id6749142719",
+        android: "https://play.google.com/store/apps/details?id=com.olosos.app&hl=en_IN"
+      }
+    ]
+  },
+  {
+    id: "ajexpay",
+    name: "AJEXPAY",
+    category: "fintech",
+    summary: "Secure digital wallet and utility payments portal featuring government-grade UAE PASS verification.",
+    role: "Associate Flutter Engineer",
+    problem: "Financial utility signups experience extreme dropoffs during onboarding due to manual ID uploads and verification processes. Integrating the secure UAE PASS national authentication system was crucial but challenging.",
+    features: [
+      "Secure UAE PASS single sign-on integration for immediate KYC verification.",
+      "Secured transactions logs, invoice bills, and wallet balances.",
+      "Local biometrics authentication (Biometric Auth/FaceID).",
+      "Google Play Integrity, FIDO2 integration, and SSL Pinning to prevent unauthorized access."
+    ],
+    techs: ["Flutter", "Dart", "UAE PASS SDK", "FIDO2 SDK", "Play Integrity API", "Firebase Auth", "SQLite", "Local Auth", "Flutter Secure Storage", "Provider"],
+    architecture: "MVVM Pattern with Provider State Management. Enhanced with FIDO2 Passwordless Auth, Google Play Integrity API, and SSL Pinning.",
+    challenges: "Safely processing browser authorization redirect schemes (Deep Links) and securing access tokens across Android and iOS sandbox roots.",
+    solutions: "Configured robust Custom URL Schemes and App Links to intercept UAE PASS login callbacks, and saved credentials using encrypted preferences via AES-256.",
+    results: "Achieved seamless KYC login reducing onboarding from 12 inputs to a single secure click, leading to a 40% increase in successful wallet setup completions.",
+    lessons: "Validating redirect links requires precise deep link path checking to shield apps from URI spoofing vulnerabilities.",
+    links: [
+      {
+        label: "Ajexpay Wallet",
+        ios: "https://apps.apple.com/app/id6751193078",
+        android: "https://play.google.com/store/apps/details?id=com.ajex.app&hl=en_IN"
+      }
+    ]
+  },
   {
     id: "click4marry",
     name: "Click4Marry",
@@ -59,7 +123,10 @@ const PROJECTS: Project[] = [
 ];
 
 export default function Projects() {
+  const [activeFilter, setActiveFilter] = useState<"all" | "fintech" | "utility" | "social">("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const filteredProjects = PROJECTS.filter(p => activeFilter === "all" || p.category === activeFilter);
 
   return (
     <section id="projects" className="py-24 relative overflow-hidden">
@@ -68,18 +135,36 @@ export default function Projects() {
         {/* Section Header */}
         <div className="flex flex-col items-center mb-12 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
-            Featured <span className="bg-gradient-to-r from-brand-blue to-brand-purple bg-clip-text text-transparent">Project</span>
+            Featured <span className="bg-gradient-to-r from-brand-blue to-brand-purple bg-clip-text text-transparent">Projects</span>
           </h2>
           <div className="w-12 h-1 bg-brand-purple rounded-full mt-4" />
+        </div>
+
+        {/* Filters Tabs */}
+        <div className="flex flex-wrap gap-2 justify-center mb-12">
+          {["all", "fintech", "utility", "social"].map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveFilter(tab as any)}
+              className={cn(
+                "px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer border",
+                activeFilter === tab 
+                  ? "bg-gradient-to-r from-brand-blue to-brand-purple text-white border-transparent shadow-lg shadow-brand-purple/20" 
+                  : "bg-foreground/5 hover:bg-foreground/10 text-foreground/75 border-foreground/5 dark:border-white/5"
+              )}
+            >
+              {tab === "all" ? "All Projects" : tab === "utility" ? "Utility" : tab}
+            </button>
+          ))}
         </div>
 
         {/* Projects Cards Grid */}
         <motion.div 
           layout
-          className="grid grid-cols-1 max-w-md mx-auto gap-8 w-full"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl mx-auto"
         >
           <AnimatePresence mode="popLayout">
-            {PROJECTS.map((project) => (
+            {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
                 layout

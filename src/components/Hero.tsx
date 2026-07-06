@@ -87,7 +87,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-base sm:text-lg md:text-xl text-foreground/60 mt-6 max-w-2xl leading-relaxed font-light"
           >
-            Focused on building high-performance, secure, and production-ready mobile applications for Android and iOS. Specializing in social, matchmaking, and chat applications with MVVM Architecture.
+            Focused on building high-performance, secure, and production-ready mobile applications for Android and iOS. Specializing in fintech, on-demand utility, and social applications with MVVM Architecture.
           </motion.p>
 
           {/* Social Badges and Actions */}
