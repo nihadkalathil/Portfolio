@@ -126,15 +126,6 @@ export default function Hero() {
             className="flex gap-6 mt-8 text-foreground/50"
           >
             <a
-              href="https://github.com/nihadkalathil"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-foreground transition-colors hover:scale-110"
-              aria-label="GitHub Profile"
-            >
-              <GitHub className="w-5 h-5" />
-            </a>
-            <a
               href="https://www.linkedin.com/in/nihad-k/"
               target="_blank"
               rel="noopener noreferrer"

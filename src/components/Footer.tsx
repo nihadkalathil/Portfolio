@@ -36,15 +36,6 @@ export default function Footer() {
         {/* Social shortcut profiles */}
         <div className="flex items-center gap-6 text-foreground/50">
           <a
-            href="https://github.com/nihadkalathil"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground transition-colors"
-            aria-label="GitHub"
-          >
-            <GitHub className="w-5 h-5" />
-          </a>
-          <a
             href="https://www.linkedin.com/in/nihad-k/"
             target="_blank"
             rel="noopener noreferrer"
