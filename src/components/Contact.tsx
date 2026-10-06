@@ -142,8 +142,8 @@ export default function Contact() {
                 </div>
 
                 <a
-                  href="/resume.pdf"
-                  download="Nihad_K_Resume.pdf"
+                  href="/Nihad%20K%20CV.pdf"
+                  download="Nihad K CV.pdf"
                   className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-2xl border border-foreground/10 hover:bg-foreground/5 text-sm font-medium hover:scale-[1.02] active:scale-95 transition-all text-foreground glass-panel"
                 >
                   <Download className="w-4 h-4" />

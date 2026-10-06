@@ -111,8 +111,8 @@ export default function Hero() {
             </a>
 
             <a
-              href="/resume.pdf"
-              download="Nihad_K_Resume.pdf"
+              href="/Nihad%20K%20CV.pdf"
+              download="Nihad K CV.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-foreground/10 hover:bg-foreground/5 font-medium hover:scale-105 active:scale-95 transition-all text-foreground glass-panel"
             >
               <Download className="w-4 h-4" />
