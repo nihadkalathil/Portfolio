@@ -98,7 +98,7 @@ export default function Navbar() {
             <div className="p-1.5 rounded-lg bg-brand-purple/10 border border-brand-purple/20">
               <Code2 className="w-5 h-5 text-brand-purple" />
             </div>
-            <span className="bg-gradient-to-r from-brand-blue to-brand-purple bg-clip-text text-transparent font-bold">Nihad.dev</span>
+            <span className="bg-gradient-to-r from-brand-blue to-brand-purple bg-clip-text text-transparent font-bold">Nihad K</span>
           </a>
 
           {/* Desktop Navigation */}

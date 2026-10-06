@@ -23,16 +23,6 @@ export default function Footer() {
     <footer className="border-t border-white/5 bg-background relative py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left relative z-10">
         
-        {/* Author copyright */}
-        <div>
-          <p className="text-xs sm:text-sm text-foreground/40 font-light">
-            © {new Date().getFullYear()} Nihad K. All rights reserved.
-          </p>
-          <p className="text-[10px] sm:text-xs text-foreground/30 font-light mt-1">
-            Designed &amp; Developed with Next.js, Tailwind v4 &amp; Framer Motion.
-          </p>
-        </div>
-
         {/* Social shortcut profiles */}
         <div className="flex items-center gap-6 text-foreground/50">
           <a
