@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, Smartphone, Database, Layers, MapPin, Terminal } from "lucide-react";
+import { Code, Smartphone, Database, Layers, MapPin, Key } from "lucide-react";
 
 interface SkillItem {
   name: string;
@@ -67,14 +67,16 @@ const SKILL_CATEGORIES: SkillCategory[] = [
     ]
   },
   {
-    title: "Testing, Tools & Release",
-    icon: Terminal,
+    title: "Authentication & Security",
+    icon: Key,
     skills: [
-      { name: "Unit & widget testing" },
-      { name: "Debugging" },
-      { name: "Git, GitHub & Bitbucket" },
-      { name: "Postman, Android Studio, Xcode & VS Code" },
-      { name: "App Store & Google Play releases" }
+      { name: "FIDO2 passwordless authentication" },
+      { name: "Google Play Integrity API" },
+      { name: "UAE PASS integration" },
+      { name: "Firebase Authentication" },
+      { name: "OAuth 2.0 & session tokens" },
+      { name: "SSL pinning" },
+      { name: "Biometric authentication" }
     ]
   }
 ];
