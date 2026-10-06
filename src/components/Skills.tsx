@@ -1,11 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, Smartphone, Database, Key, Layers, Terminal } from "lucide-react";
+import { Code, Smartphone, Database, Layers, MapPin, Terminal } from "lucide-react";
 
 interface SkillItem {
   name: string;
-  level: number; // percentage
 }
 
 interface SkillCategory {
@@ -16,59 +15,66 @@ interface SkillCategory {
 
 const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    title: "Languages",
+    title: "Languages & Frameworks",
     icon: Code,
     skills: [
-      { name: "Dart (Primary)", level: 95 },
-      { name: "HTML & CSS", level: 90 },
-      { name: "Kotlin / Java (Android Native)", level: 75 },
-      { name: "Swift / Objective-C (iOS Native)", level: 70 }
+      { name: "Dart" },
+      { name: "Flutter SDK" },
+      { name: "HTML" },
+      { name: "CSS" }
     ]
   },
   {
-    title: "Frameworks & SDKs",
-    icon: Smartphone,
-    skills: [
-      { name: "Flutter SDK", level: 95 }
-    ]
-  },
-  {
-    title: "Architecture & State Mgmt",
+    title: "State Management",
     icon: Layers,
     skills: [
-      { name: "Provider (State Management)", level: 95 },
-      { name: "MVVM Architecture", level: 92 }
+      { name: "Provider (production)" },
+      { name: "Bloc (working knowledge)" },
+      { name: "Riverpod (working knowledge)" }
     ]
   },
   {
-    title: "Authentication & Security",
-    icon: Key,
+    title: "APIs & Authentication",
+    icon: Smartphone,
     skills: [
-      { name: "FIDO2 Passwordless Auth", level: 90 },
-      { name: "Google Play Integrity API", level: 92 },
-      { name: "UAE PASS Integration", level: 95 },
-      { name: "Firebase Authentication", level: 92 },
-      { name: "OAuth 2.0 & Session Tokens", level: 88 }
+      { name: "REST APIs & JSON" },
+      { name: "Token-based & OAuth authentication" },
+      { name: "WebSockets" },
+      { name: "Deep linking" },
+      { name: "Third-party API integration" }
     ]
   },
   {
-    title: "Databases & APIs",
+    title: "Firebase & Storage",
     icon: Database,
     skills: [
-      { name: "RESTful Web APIs", level: 95 },
-      { name: "SQLite DB & Floor ORM", level: 85 },
-      { name: "Hive NoSQL Cache", level: 90 },
-      { name: "WebSockets Live Streams", level: 88 }
+      { name: "Firebase Authentication, Firestore & FCM" },
+      { name: "Firebase Analytics & Crashlytics" },
+      { name: "SQLite & Hive" },
+      { name: "SharedPreferences & secure storage" }
     ]
   },
   {
-    title: "DevOps & Tooling",
+    title: "Mobile Features",
+    icon: MapPin,
+    skills: [
+      { name: "Offline data handling" },
+      { name: "Barcode & QR scanning" },
+      { name: "Photo capture" },
+      { name: "Location tracking & Google Maps" },
+      { name: "Responsive UI from Figma" },
+      { name: "Mobile app security" }
+    ]
+  },
+  {
+    title: "Testing, Tools & Release",
     icon: Terminal,
     skills: [
-      { name: "Git, GitHub & Bitbucket", level: 90 },
-      { name: "Xcode & App Store Deployments", level: 90 },
-      { name: "Android Studio & Play Store Deployments", level: 92 },
-      { name: "Postman & API Client Testing", level: 95 }
+      { name: "Unit & widget testing" },
+      { name: "Debugging" },
+      { name: "Git, GitHub & Bitbucket" },
+      { name: "Postman, Android Studio, Xcode & VS Code" },
+      { name: "App Store & Google Play releases" }
     ]
   }
 ];
@@ -126,27 +132,14 @@ export default function Skills() {
                   <h3 className="text-lg font-bold text-foreground">{category.title}</h3>
                 </div>
 
-                {/* Skills Meters list */}
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
-                    <div key={skill.name}>
-                      <div className="flex justify-between items-center text-xs font-semibold text-foreground/75 mb-1.5">
-                        <span>{skill.name}</span>
-                        <span>{skill.level}%</span>
-                      </div>
-                      
-                      {/* Bar Track */}
-                      <div className="h-2 w-full rounded-full bg-foreground/10 dark:bg-white/5 overflow-hidden">
-                        {/* Fill */}
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
-                          className="h-full rounded-full bg-gradient-to-r from-brand-blue via-brand-purple to-brand-cyan"
-                        />
-                      </div>
-                    </div>
+                    <span
+                      key={skill.name}
+                      className="px-2.5 py-1.5 rounded-lg bg-foreground/5 border border-foreground/5 text-xs text-foreground/75"
+                    >
+                      {skill.name}
+                    </span>
                   ))}
                 </div>
               </div>

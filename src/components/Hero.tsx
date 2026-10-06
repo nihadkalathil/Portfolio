@@ -87,7 +87,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-base sm:text-lg md:text-xl text-foreground/60 mt-6 max-w-2xl leading-relaxed font-light"
           >
-            Focused on building high-performance, secure, and production-ready mobile applications for Android and iOS. Specializing in fintech, on-demand utility, and social applications with MVVM Architecture.
+            Flutter developer with 2+ years of experience delivering Android and iOS apps. Independently delivered the Flutter side of AJEXPAY and contributed to 9+ production apps, with experience across fintech, APIs, Firebase, deep linking, testing, and app store releases.
           </motion.p>
 
           {/* Social Badges and Actions */}

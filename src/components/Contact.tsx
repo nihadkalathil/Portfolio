@@ -111,8 +111,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-[10px] text-foreground/40 font-bold uppercase tracking-wide">Phone</p>
-                    <a href="tel:+919747216500" className="text-sm font-semibold text-foreground hover:underline block">
-                      +91 97472 16500
+                    <a href="tel:+971547539639" className="text-sm font-semibold text-foreground hover:underline block">
+                      +971 54 753 9639
                     </a>
                   </div>
                 </div>
@@ -125,7 +125,7 @@ export default function Contact() {
                   <div>
                     <p className="text-[10px] text-foreground/40 font-bold uppercase tracking-wide">Location</p>
                     <p className="text-sm font-semibold text-foreground">
-                      Malappuram, Kerala, India
+                      Dubai, United Arab Emirates
                     </p>
                   </div>
                 </div>

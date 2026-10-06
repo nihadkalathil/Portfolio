@@ -13,14 +13,14 @@ interface StatItem {
 
 const STATS: StatItem[] = [
   {
-    value: "5+",
+    value: "9+",
     label: "Production Apps",
     icon: Smartphone,
-    desc: "Complete Flutter applications launched or maintained across mobile stores.",
+    desc: "Independently delivered AJEXPAY and contributed to eight additional production apps.",
     colorClass: "text-brand-purple"
   },
   {
-    value: "2",
+    value: "2+",
     label: "Years Experience",
     icon: Award,
     desc: "Dedicated professional software experience in Agile workspace structures.",
@@ -28,9 +28,9 @@ const STATS: StatItem[] = [
   },
   {
     value: "100%",
-    label: "MVVM Architecture",
+    label: "AJEXPAY Flutter Development",
     icon: Layers,
-    desc: "Strict adherence to Clean Coding, MVVM/Provider structures, and robust modular testing.",
+    desc: "Independently owned and delivered the Flutter development for a live fintech app.",
     colorClass: "text-brand-emerald"
   }
 ];
@@ -103,15 +103,15 @@ export default function Achievements() {
             <div className="flex flex-col gap-3 text-xs sm:text-sm text-foreground/75 font-light">
               <div className="flex gap-2 items-start">
                 <CheckCircle2 className="w-4 h-4 text-brand-emerald shrink-0 mt-0.5" />
-                <span><strong className="font-semibold text-foreground">Fintech Security</strong>: Safe session locks, FIDO2 Passwordless Auth, Google Play Integrity API, and SSL Pinning.</span>
+                <span><strong className="font-semibold text-foreground">Fintech Delivery</strong>: Delivered UAE PASS authentication, secure payment workflows, and transaction management for AJEXPAY.</span>
               </div>
               <div className="flex gap-2 items-start">
                 <CheckCircle2 className="w-4 h-4 text-brand-emerald shrink-0 mt-0.5" />
-                <span><strong className="font-semibold text-foreground">Deployment Excellence</strong>: Released 3 separate store distributions with automated Bitbucket/Git pipelines.</span>
+                <span><strong className="font-semibold text-foreground">App Store Releases</strong>: Supported production releases on Google Play and the Apple App Store.</span>
               </div>
               <div className="flex gap-2 items-start">
                 <CheckCircle2 className="w-4 h-4 text-brand-emerald shrink-0 mt-0.5" />
-                <span><strong className="font-semibold text-foreground">Real-time Synchronization</strong>: Maintained continuous map streams utilizing adaptive location polling.</span>
+                <span><strong className="font-semibold text-foreground">Mobile Features</strong>: Built location tracking, Google Maps, WebSocket features, barcode and QR scanning, and photo capture.</span>
               </div>
             </div>
           </div>

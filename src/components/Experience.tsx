@@ -18,18 +18,18 @@ const EXPERIENCES: Job[] = [
     role: "Associate Software Engineer",
     company: "Aufait Technologies Pvt. Ltd.",
     location: "Kozhikode, Kerala, India",
-    duration: "Feb 2025 – Present",
+    duration: "Feb 2025 – Aug 2026",
     type: "Full-Time",
     achievements: [
-      "Engineered a highly scalable social matchmaking application (Click4Marry) utilizing Cloud Firestore listeners for real-time messaging, secure private albums, and native-level screen capture blocking.",
-      "Successfully integrated secure national identity authorization redirect flows (UAE PASS) for frictionless digital wallet verification inside AJEXPAY.",
-      "Developed OLO (On-Demand Utility suite), implementing continuous real-time GPS tracking, Google Maps overlays, and background location services.",
-      "Optimized offline local synchronization states and data persistence layers using SQLite and Hive cache, improving application speed by up to 25%.",
-      "Configured robust security frameworks including FIDO2 integration, Google Play Integrity, biometrics (FaceID/Fingerprint), and deep link scheme protections.",
-      "Managed end-to-end publishing pipelines, distribution provisioning, and releases on Apple App Store Connect and Google Play Console.",
-      "Collaborated in Agile teams, adopting MVVM Architecture paired with Provider state management to write clean, maintainable, and modular codebases."
+      "Independently delivered all Flutter development for AJEXPAY, a live production fintech app, and contributed to eight additional production apps across Android and iOS.",
+      "Integrated REST APIs and JSON across multiple backend services, along with Firebase Authentication, Firestore, and Firebase Cloud Messaging; used Provider for state management and secure token-based authentication.",
+      "Implemented UAE PASS authentication, secure payment workflows, and transaction management for AJEXPAY.",
+      "Built real-time location tracking, Google Maps features, WebSocket functionality, barcode and QR scanning, and photo capture across other apps.",
+      "Implemented deep linking to route users into the appropriate app content and flows.",
+      "Handled local and secure data persistence with SQLite, Hive, SharedPreferences, and secure storage; wrote unit and widget tests and debugged production builds.",
+      "Supported Google Play and Apple App Store releases, resolving issues from crash reports and QA and user feedback while collaborating in Agile sprints and code reviews."
     ],
-    techs: ["Flutter", "Dart", "Firebase", "WebSockets", "Google Maps API", "UAE PASS SDK", "FIDO2 SDK", "Play Integrity API", "SQLite", "Hive Cache", "Provider", "Git", "Xcode", "Android Studio"]
+    techs: ["Flutter", "Dart", "REST APIs", "JSON", "Firebase", "Provider", "Deep Linking", "WebSockets", "UAE PASS", "Google Maps", "SQLite", "Hive", "SharedPreferences", "Secure Storage", "Unit & Widget Testing"]
   },
   {
     role: "Flutter Intern",
