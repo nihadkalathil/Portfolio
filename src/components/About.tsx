@@ -53,10 +53,10 @@ export default function About() {
               I am a passionate <strong className="font-semibold text-foreground">Flutter Developer</strong> who loves transforming complex business goals into fluid, scalable mobile applications. My path began with a solid academic foundation in computer programming, culminating in a <strong className="font-semibold text-foreground">Master of Computer Applications (MCA)</strong>.
             </p>
             <p className="text-foreground/75 font-light leading-relaxed">
-              My engineering philosophy revolves around three main tenets: <strong className="font-semibold text-foreground">MVVM Architecture</strong>, <strong className="font-semibold text-foreground">Security-First Integration</strong>, and <strong className="font-semibold text-foreground">Seamless User Experience</strong>. I believe a mobile app is not just code—it&apos;s a gateway for users to solve real-world problems. Whether integrating secure national identities (UAE PASS), implementing continuous GPS mapping for active utility networks, or enforcing screenshot protection blocks, I strive to write readable, unit-tested, and performant code.
+              My engineering philosophy revolves around three main tenets: <strong className="font-semibold text-foreground">MVVM Architecture</strong>, <strong className="font-semibold text-foreground">Security-First Integration</strong>, and <strong className="font-semibold text-foreground">Seamless User Experience</strong>. I believe a mobile app is not just code—it&apos;s a gateway for users to solve real-world problems. Whether integrating secure national identities (UAE PASS), implementing continuous GPS mapping for active utility networks, or enforcing screenshot protection blocks, I strive to write readable, performant code.
             </p>
             <p className="text-foreground/75 font-light leading-relaxed">
-              At <strong className="font-semibold text-foreground">Aufait Technologies</strong>, I independently delivered the Flutter development for AJEXPAY and contributed to eight other production apps. My work has included fintech payments, location tracking, deep linking, Firebase, offline storage, testing, and production releases. I enjoy collaborating in Agile teams and turning product designs and workflows into responsive mobile experiences.
+              At <strong className="font-semibold text-foreground">Aufait Technologies</strong>, I independently delivered the Flutter development for AJEXPAY and contributed to eight other production apps. My work has included fintech payments, location tracking, deep linking, Firebase, offline storage, and production releases. I enjoy collaborating in Agile teams and turning product designs and workflows into responsive mobile experiences.
             </p>
           </motion.div>
 
@@ -129,7 +129,7 @@ export default function About() {
                 <li>Strict Separation of Concerns via MVVM Architecture</li>
                 <li>State management optimized for rendering efficiency (Provider)</li>
                 <li>Secure, token-based authentication and mobile app security</li>
-                <li>Unit and widget testing, debugging, and production release support</li>
+                <li>Debugging and production release support</li>
               </ul>
             </div>
 

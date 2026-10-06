@@ -87,7 +87,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-base sm:text-lg md:text-xl text-foreground/60 mt-6 max-w-2xl leading-relaxed font-light"
           >
-            Flutter developer with 2+ years of experience delivering Android and iOS apps. Independently delivered the Flutter side of AJEXPAY and contributed to 9+ production apps, with experience across fintech, APIs, Firebase, deep linking, testing, and app store releases.
+            Flutter developer with 2+ years of experience delivering Android and iOS apps. Independently delivered the Flutter side of AJEXPAY and contributed to 9+ production apps, with experience across fintech, APIs, Firebase, deep linking, and app store releases.
           </motion.p>
 
           {/* Social Badges and Actions */}

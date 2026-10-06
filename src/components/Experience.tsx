@@ -26,10 +26,10 @@ const EXPERIENCES: Job[] = [
       "Implemented UAE PASS authentication, secure payment workflows, and transaction management for AJEXPAY.",
       "Built real-time location tracking, Google Maps features, WebSocket functionality, barcode and QR scanning, and photo capture across other apps.",
       "Implemented deep linking to route users into the appropriate app content and flows.",
-      "Handled local and secure data persistence with SQLite, Hive, SharedPreferences, and secure storage; wrote unit and widget tests and debugged production builds.",
+      "Handled local and secure data persistence with SQLite, Hive, SharedPreferences, and secure storage; debugged production builds.",
       "Supported Google Play and Apple App Store releases, resolving issues from crash reports and QA and user feedback while collaborating in Agile sprints and code reviews."
     ],
-    techs: ["Flutter", "Dart", "REST APIs", "JSON", "Firebase", "Provider", "Deep Linking", "WebSockets", "UAE PASS", "Google Maps", "SQLite", "Hive", "SharedPreferences", "Secure Storage", "Unit & Widget Testing"]
+    techs: ["Flutter", "Dart", "REST APIs", "JSON", "Firebase", "Provider", "Deep Linking", "WebSockets", "UAE PASS", "Google Maps", "SQLite", "Hive", "SharedPreferences", "Secure Storage"]
   },
   {
     role: "Flutter Intern",
@@ -41,7 +41,7 @@ const EXPERIENCES: Job[] = [
       "Assisted senior engineers in prototyping, drafting modular widgets, and integrating backend REST endpoints into core views.",
       "Developed cross-platform responsive screens supporting various screen dimensions and aspect ratios across Android and iOS devices.",
       "Debugged local database states, state management variables (Provider), and HTTP errors, resolving 50+ user-reported layout and data errors.",
-      "Wrote structured unit and widget test cases, achieving a 75% coverage rate for critical business validation modules.",
+      "Assisted with debugging and resolving QA and user-reported issues.",
       "Participated in daily standups, code walk-throughs, and collaborative git work branches in Bitbucket and GitHub environments."
     ],
     techs: ["Flutter", "Dart", "RESTful APIs", "Firebase", "Git", "Provider State Management", "Android Studio", "Postman"]
