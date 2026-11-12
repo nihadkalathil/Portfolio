@@ -78,7 +78,7 @@ const PROJECTS: Project[] = [
   },
   {
     id: "me-friend-event-ticketing",
-    name: "ME Friend Event Ticketing",
+    name: "Me Friend Event Ticketting",
     category: "utility",
     summary: "An internal Android app for Madhyamam event volunteers to scan booked tickets using a phone or PDA scanner.",
     role: "Project Contributor — Android ticket scanning app",
