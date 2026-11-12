@@ -6,6 +6,7 @@ import { Mail, Phone, MapPin, Copy, Check, Send, Download, MessageCircle } from 
 
 export default function Contact() {
   const [emailCopied, setEmailCopied] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState<string | null>(null);
   const [formState, setFormState] = useState({ name: "", email: "", subject: "", message: "" });
   const [formSubmitted, setFormSubmitted] = useState(false);
 
@@ -13,6 +14,12 @@ export default function Contact() {
     navigator.clipboard.writeText("nihadkalathil@gmail.com");
     setEmailCopied(true);
     setTimeout(() => setEmailCopied(false), 2000);
+  };
+
+  const copyPhone = async (phone: string) => {
+    await navigator.clipboard.writeText(phone);
+    setCopiedPhone(phone);
+    setTimeout(() => setCopiedPhone(null), 2000);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -111,12 +118,30 @@ export default function Contact() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-[10px] text-foreground/40 font-bold uppercase tracking-wide">Phone</p>
-                    <a href="tel:+971547539639" className="text-sm font-semibold text-foreground hover:underline block">
-                      +971 54 753 9639
-                    </a>
-                    <a href="tel:+919747216500" className="text-sm font-semibold text-foreground hover:underline block">
-                      +91 97472 16500
-                    </a>
+                    <div className="flex items-center justify-between gap-2">
+                      <a href="tel:+971547539639" className="text-sm font-semibold text-foreground hover:underline">
+                        +971 54 753 9639
+                      </a>
+                      <button
+                        onClick={() => copyPhone("+971 54 753 9639")}
+                        className="p-2 rounded-xl border border-foreground/10 hover:bg-foreground/5 transition-colors text-foreground cursor-pointer"
+                        aria-label="Copy UAE phone number"
+                      >
+                        {copiedPhone === "+971 54 753 9639" ? <Check className="w-4 h-4 text-brand-emerald" /> : <Copy className="w-4 h-4" />}
+                      </button>
+                    </div>
+                    <div className="flex items-center justify-between gap-2">
+                      <a href="tel:+919747216500" className="text-sm font-semibold text-foreground hover:underline">
+                        +91 97472 16500
+                      </a>
+                      <button
+                        onClick={() => copyPhone("+91 97472 16500")}
+                        className="p-2 rounded-xl border border-foreground/10 hover:bg-foreground/5 transition-colors text-foreground cursor-pointer"
+                        aria-label="Copy India phone number"
+                      >
+                        {copiedPhone === "+91 97472 16500" ? <Check className="w-4 h-4 text-brand-emerald" /> : <Copy className="w-4 h-4" />}
+                      </button>
+                    </div>
                   </div>
                 </div>
 
