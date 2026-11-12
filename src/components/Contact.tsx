@@ -109,10 +109,13 @@ export default function Contact() {
                   <div className="p-3 rounded-2xl bg-brand-purple/5 border border-brand-purple/10 text-brand-purple">
                     <Phone className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <p className="text-[10px] text-foreground/40 font-bold uppercase tracking-wide">Phone</p>
                     <a href="tel:+971547539639" className="text-sm font-semibold text-foreground hover:underline block">
                       +971 54 753 9639
+                    </a>
+                    <a href="tel:+919747216500" className="text-sm font-semibold text-foreground hover:underline block">
+                      +91 97472 16500
                     </a>
                   </div>
                 </div>
@@ -131,7 +134,7 @@ export default function Contact() {
                         rel="noopener noreferrer"
                         className="text-sm font-semibold text-foreground hover:underline"
                       >
-                        Business WhatsApp · +971 54 753 9639
+                        WhatsApp · +971 54 753 9639
                       </a>
                       <a
                         href="https://wa.me/919747216500"
