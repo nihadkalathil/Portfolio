@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Copy, Check, Send, Download } from "lucide-react";
+import { Mail, Phone, MapPin, Copy, Check, Send, Download, MessageCircle } from "lucide-react";
 
 export default function Contact() {
   const [emailCopied, setEmailCopied] = useState(false);
@@ -114,6 +114,34 @@ export default function Contact() {
                     <a href="tel:+971547539639" className="text-sm font-semibold text-foreground hover:underline block">
                       +971 54 753 9639
                     </a>
+                  </div>
+                </div>
+
+                {/* WhatsApp Contact Options */}
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-2xl bg-brand-emerald/5 border border-brand-emerald/10 text-brand-emerald">
+                    <MessageCircle className="w-5 h-5" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[10px] text-foreground/40 font-bold uppercase tracking-wide mb-2">WhatsApp</p>
+                    <div className="flex flex-col gap-2">
+                      <a
+                        href="https://wa.me/971547539639"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-semibold text-foreground hover:underline"
+                      >
+                        Business WhatsApp · +971 54 753 9639
+                      </a>
+                      <a
+                        href="https://wa.me/919747216500"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-semibold text-foreground hover:underline"
+                      >
+                        WhatsApp · +91 97472 16500
+                      </a>
+                    </div>
                   </div>
                 </div>
 
