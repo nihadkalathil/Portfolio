@@ -116,7 +116,7 @@ export default function Contact() {
                   <div className="p-3 rounded-2xl bg-brand-purple/5 border border-brand-purple/10 text-brand-purple">
                     <Phone className="w-5 h-5" />
                   </div>
-                  <div className="flex-1 min-w-0">
+                  <div className="flex-1 min-w-0 flex flex-col gap-2">
                     <p className="text-[10px] text-foreground/40 font-bold uppercase tracking-wide">Phone</p>
                     <div className="flex items-center justify-between gap-2">
                       <a href="tel:+971547539639" className="text-sm font-semibold text-foreground hover:underline">
