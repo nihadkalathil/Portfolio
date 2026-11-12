@@ -14,7 +14,7 @@ interface ProjectLink {
 interface Project {
   id: string;
   name: string;
-  category: "fintech" | "utility" | "social";
+  category: "fintech" | "utility" | "social" | "medical";
   summary: string;
   role: string;
   problem: string;
@@ -29,6 +29,73 @@ interface Project {
 }
 
 const PROJECTS: Project[] = [
+  {
+    id: "medgen-japan",
+    name: "MedGen Japan",
+    category: "medical",
+    summary: "A Japan focused AI research assistant for doctors, with website to app deeplinks and selected UI work contributed by me.",
+    role: "Flutter Developer — deeplinking and selected UI",
+    problem: "Doctors discovering MedGen Japan through the web need a convenient way to open the app. Store availability can vary by country or region, so the website entry point should lead users to the relevant app destination.",
+    features: [
+      "My contribution: implemented deeplinking to connect website entry points with the mobile app.",
+      "My contribution: built selected UI screens and components.",
+      "Product context: AI assisted clinical research across medical papers, guidelines, and official documents.",
+      "Product context: presents literature and evidence to support doctors researching clinical questions."
+    ],
+    techs: ["Flutter", "Deeplinking", "iOS", "Android"],
+    architecture: "My scope covered the deeplinking flow and selected UI. The AI research and clinical information features are part of the product, not my contribution.",
+    challenges: "Making website to app entry points work smoothly across iOS and Android, while accounting for regional differences in app availability.",
+    solutions: "Implemented the deeplinking portion and selected app UI. The app’s AI, medical research, and backend functionality were outside my scope.",
+    results: "Added website entry points to the iOS and Android apps and contributed to selected screens. No broader product or clinical outcome is claimed.",
+    lessons: "A clear deeplinking path helps connect web discovery to a mobile app, especially when app availability varies by region.",
+    links: [
+      {
+        label: "MedGen Japan",
+        ios: "https://apps.apple.com/in/app/medgen-japan-%E6%97%A5%E6%9C%AC%E3%81%AE%E5%8C%BB%E5%B8%AB%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEai%E3%82%A2%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%88/id6756404511",
+        android: "https://play.google.com/store/apps/details?id=com.medgen.app"
+      }
+    ]
+  },
+  {
+    id: "sma-investment-hrms",
+    name: "SMA Investment HRMS",
+    category: "utility",
+    summary: "An internal HRMS platform for payroll, leave requests, task allocation, and other employee operations. I contributed to roughly 25–30% of the app through API and UI implementation.",
+    role: "App contributor — API and UI implementation (approximately 25–30%)",
+    problem: "Organizations need one place to manage recurring HR operations, including payroll, leave applications, and task allocation.",
+    features: [
+      "My contribution: implemented portions of the app's API integrations and user interface.",
+      "Product capability: payroll management.",
+      "Product capability: employee leave applications and related workflows.",
+      "Product capability: task allocation and other HRMS activities."
+    ],
+    techs: ["HRMS", "API Integration", "UI Development"],
+    architecture: "A private HRMS application. My contribution covered approximately 25–30% of the app, focused on API and UI implementation.",
+    challenges: "Contributing to a broad HRMS workflow spanning employee operations such as payroll, leave, and task management.",
+    solutions: "Implemented assigned API and UI portions across the application. The app is private, so public download links are unavailable.",
+    results: "Contributed approximately 25–30% of the app. The application provides SMA Investment with a private HRMS solution.",
+    lessons: "HRMS features work together across employee and administrative workflows, so clear API and UI behavior matters throughout the app."
+  },
+  {
+    id: "me-friend-event-ticketing",
+    name: "ME Friend Event Ticketing",
+    category: "utility",
+    summary: "An internal Android app for Madhyamam event volunteers to scan booked tickets using a phone or PDA scanner.",
+    role: "Project Contributor — Android ticket scanning app",
+    problem: "Event volunteers need to verify booked tickets at entry using the devices available to them, including phones and dedicated PDA scanners.",
+    features: [
+      "Scans booked event tickets from an Android phone.",
+      "Supports ticket scanning with a PDA scanner.",
+      "Built for use by Madhyamam event volunteers.",
+      "Distributed privately for event operations and not available on Google Play."
+    ],
+    techs: ["Android", "Ticket Scanning", "PDA Scanner"],
+    architecture: "An Android ticket scanning app for Madhyamam's internal event operations.",
+    challenges: "Supporting ticket scanning at event entry with both a phone and a dedicated PDA scanner.",
+    solutions: "Provided an internal Android app for authorized event volunteers. Public app store links are not available.",
+    results: "Gives Madhyamam event volunteers a mobile workflow for scanning booked tickets at events.",
+    lessons: "Ticket scanning workflows need to fit the hardware and entry process used by event staff."
+  },
   {
     id: "olo",
     name: "OLO (The Car App, Merchant, SOS)",
@@ -123,7 +190,7 @@ const PROJECTS: Project[] = [
 ];
 
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState<"all" | "fintech" | "utility" | "social">("all");
+  const [activeFilter, setActiveFilter] = useState<"all" | "fintech" | "utility" | "social" | "medical">("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const filteredProjects = PROJECTS.filter(p => activeFilter === "all" || p.category === activeFilter);
@@ -142,7 +209,7 @@ export default function Projects() {
 
         {/* Filters Tabs */}
         <div className="flex flex-wrap gap-2 justify-center mb-12">
-          {["all", "fintech", "utility", "social"].map((tab) => (
+          {["all", "fintech", "utility", "social", "medical"].map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveFilter(tab as any)}
@@ -317,7 +384,7 @@ export default function Projects() {
                   {/* Core Features */}
                   <div>
                     <h4 className="font-bold text-foreground flex items-center gap-2 mb-3">
-                      <Cpu className="w-4 h-4 text-brand-cyan" /> Key Features Implemented
+                      <Cpu className="w-4 h-4 text-brand-cyan" /> Project Highlights
                     </h4>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-4 list-disc text-foreground/70 font-light text-xs sm:text-sm">
                       {selectedProject.features.map((feature, i) => (
